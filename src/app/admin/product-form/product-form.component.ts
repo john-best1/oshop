@@ -13,7 +13,7 @@ import {take} from 'rxjs/operators';
 export class ProductFormComponent implements OnInit {
 
   categories$;
-  product = {};
+  product;
   id;
   
   constructor(private route: ActivatedRoute, private router: Router, 
@@ -31,7 +31,7 @@ export class ProductFormComponent implements OnInit {
     this.router.navigate(['/admin/products']);
   }
 
-  delete(product){
+  delete(){
     if(!confirm('Are you sure you want to delete this product/')) return;
     
     this.productService.delete(this.id);
