@@ -19,7 +19,7 @@ export class AppComponent {
       if (!returnUrl)return
 
       localStorage.removeItem('returnUrl');
-      router.navigateByUrl('returnUrl');
+      router.navigateByUrl(returnUrl);
         
     })
   }
