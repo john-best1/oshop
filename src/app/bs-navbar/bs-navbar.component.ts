@@ -1,9 +1,9 @@
 import { AngularFireObject } from 'angularfire2/database';
-import { AppUser } from './../models/app-user';
-import { AuthService } from './../auth.service';
+import { AppUser } from 'shared/models/app-user';
+import { AuthService } from 'shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
-import { ShoppingCartService } from '../shopping-cart.service';
-import { ShoppingCart } from '../models/shopping-cart';
+import { ShoppingCartService } from 'shared/services/shopping-cart.service';
+import { ShoppingCart } from 'shared/models/shopping-cart';
 import { Observable } from 'rxjs';
 
 @Component({
