@@ -1,3 +1,5 @@
+import { CustomFormsModule } from 'ng2-validation';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
@@ -11,6 +13,11 @@ import { OrderService } from './services/order.service';
 import { ProductService } from './services/product.service';
 import { ShoppingCartService } from './services/shopping-cart.service';
 import { UserService } from './services/user.service';
+import { MatTableModule, MatPaginatorModule, MatSortModule, MatProgressSpinnerModule, MatInputModule } from '@angular/material';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -18,11 +25,34 @@ import { UserService } from './services/user.service';
     ProductQuantityComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    CustomFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+    MatInputModule,
+    NgbModule.forRoot(),
+    AngularFirestoreModule, 
+    AngularFireAuthModule, 
+    AngularFireStorageModule, 
   ],
   exports: [
     ProductCardComponent, 
-    ProductQuantityComponent
+    ProductQuantityComponent,
+    CommonModule,
+    FormsModule,
+    CustomFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
+    MatInputModule,
+    NgbModule.forRoot().ngModule,
+    AngularFirestoreModule, 
+    AngularFireAuthModule, 
+    AngularFireStorageModule, 
   ],
   providers:[
     AuthService,
@@ -33,6 +63,7 @@ import { UserService } from './services/user.service';
     ProductService,
     ShoppingCartService,
     OrderService
-  ]
+  ],
+
 })
 export class SharedModule { }
