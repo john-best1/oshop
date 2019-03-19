@@ -26,8 +26,8 @@ getAll2(): Observable<Product[]> {
           map(changes =>
               changes.map(c => {
                   const data = c.payload.val() as Product;
-                  const id = c.payload.key;
-                  return { id, ...data };
+                  const $key = c.payload.key;
+                  return { $key, ...data };
               })
           )
       );

@@ -21,7 +21,7 @@
                 <ng-container matColumnDef="actions">
                         <mat-header-cell  *matHeaderCellDef></mat-header-cell>
                         <mat-cell *matCellDef="let element"> 
-                            <button mat-raised-button [routerLink]="['/admin/products/',element.id]">Edit</button>
+                            <button mat-raised-button [routerLink]="['/admin/products/',element.$key]">Edit</button>
                         </mat-cell>
                 </ng-container>
             <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
